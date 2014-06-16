@@ -50,8 +50,10 @@
 	position: relative;
 	padding: 10px 2px 2px 2px;
 	border: 1px solid #dedede;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+  border-radius: 5px;
 	margin: 2px 20px 0;
-	
 	.scroll-control {
 		cursor: pointer;
 		height: 100%;
@@ -60,12 +62,10 @@
 		height: 21px;
 		width: 21px;
 		position: absolute;
-		
 		&.disabled {
 			cursor: auto;
 			color: #CCCCCC;
 		}
-		
 		&[data-direction=left]{
 			float: left;
 			background-image: url(asset-path('filmstrip-back-active.png', image));
@@ -74,7 +74,6 @@
 				background-image: url(asset-path('filmstrip-back-disabled.png', image));
 			}
 		}
-		
 		&[data-direction=right] {
 			float: right;
 			display: inline-block;
@@ -85,7 +84,6 @@
 			}
 		}
 	}
-	
 	.filmstrip {
 		position: relative;
 		overflow: hidden;
@@ -99,7 +97,7 @@
 			position: absolute;
 			list-style: none;
 			margin: 0;
-			padding: 0;			
+			padding: 0;
 		}
 		li {
 			list-style-type: none;
