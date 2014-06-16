@@ -48,17 +48,18 @@
 // Filmstrip //
 .filmstrip-container {
 	position: relative;
-	padding: 10px 2px 2px 2px;
+	padding: 9px 2px 0 2px;
+  background: #f1f1f1;
 	border: 1px solid #dedede;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
   border-radius: 5px;
-	margin: 2px 20px 0;
+	margin: 0 20px 0;
 	.scroll-control {
 		cursor: pointer;
 		height: 100%;
 		vertical-align: center;
-		top: 51px;
+		top: 50px;
 		height: 21px;
 		width: 21px;
 		position: absolute;
@@ -80,7 +81,7 @@
 			background-image: url(asset-path('filmstrip-next-active.png', image));
 			right: -10px;
 			&.disabled {
-		    background-image: url(asset-path('icons/filmstrip-next-disabled.png', image));
+		    background-image: url(asset-path('filmstrip-next-disabled.png', image));
 			}
 		}
 	}
@@ -106,7 +107,7 @@
 			float: left;
 			text-align: center;
 			&.last {
-				padding-top: 35px;
+				padding-top: 29px;
 			}
 			.image-number {
 				color: #666666;
@@ -118,7 +119,6 @@
 				}
         img {
           border: 0;
-          @include image_border_thumbnail;
           float: none;
           margin: 0;
           padding: 0;
