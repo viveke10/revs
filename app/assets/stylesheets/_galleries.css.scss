@@ -1,0 +1,144 @@
+/* Collection - Detailed View */
+.blacklight-collection #documents.detailed {
+  span.muted {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  li.image-item {
+    margin-bottom: 20px;
+    min-height: 205px;
+    overflow: hidden;
+  }
+  .document {
+    border-top: 1px dotted #ccc;
+    margin-left: 0;
+    padding-bottom: 0;
+    &.first {
+      border-top: none;
+    }
+  }
+  .collection-title {
+    margin-left: 0;
+  }
+  .collection-details {
+    margin-bottom: 35px;
+  }
+  .index_title {
+    font-size: 15px;
+    margin-top: 9px;
+    max-width: none;
+  }
+  ul.image-grid {
+    margin-left: 0;
+  }
+  .collection-description {
+    font-size: 12px;
+    a {
+      color: #990000;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #660000;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Filmstrip //
+.filmstrip-container {
+	position: relative;
+	padding: 10px 2px 2px 2px;
+	border: 1px solid #dedede;
+	margin: 2px 20px 0;
+	
+	.scroll-control {
+		cursor: pointer;
+		height: 100%;
+		vertical-align: center;
+		top: 51px;
+		height: 21px;
+		width: 21px;
+		position: absolute;
+		
+		&.disabled {
+			cursor: auto;
+			color: #CCCCCC;
+		}
+		
+		&[data-direction=left]{
+			float: left;
+			background-image: url(asset-path('filmstrip-back-active.png', image));
+			left: -10px;
+			&.disabled {
+				background-image: url(asset-path('filmstrip-back-disabled.png', image));
+			}
+		}
+		
+		&[data-direction=right] {
+			float: right;
+			display: inline-block;
+			background-image: url(asset-path('filmstrip-next-active.png', image));
+			right: -10px;
+			&.disabled {
+		    background-image: url(asset-path('icons/filmstrip-next-disabled.png', image));
+			}
+		}
+	}
+	
+	.filmstrip {
+		position: relative;
+		overflow: hidden;
+    min-height: 110px;
+		margin: 0 15px;
+		.image-preview-pane {
+			margin-top: 115px;
+		}
+		ul {
+			width: 20000em;
+			position: absolute;
+			list-style: none;
+			margin: 0;
+			padding: 0;			
+		}
+		li {
+			list-style-type: none;
+			padding-bottom: 0;
+			margin: 0 4px;
+			float: left;
+			text-align: center;
+			&.last {
+				padding-top: 35px;
+			}
+			.image-number {
+				color: #666666;
+			}
+			a {
+				display: block;
+				&:hover {
+					border-bottom:none;
+				}
+        img {
+          border: 0;
+          @include image_border_thumbnail;
+          float: none;
+          margin: 0;
+          padding: 0;
+          max-height: none;
+        }
+			}
+		}
+	}
+	.filmstrip-total {
+		padding: 3px 10px;
+		position: absolute;
+		left: 20px;
+		top: -10px;
+		text-align: center;
+		border: 1px solid #CCCCCC;
+		background-color: #E6E6E6;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+}
