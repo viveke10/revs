@@ -1,4 +1,4 @@
-<div id="content" class="span9 admin">
+<div id="content" class="col-md-9 admin">
 	
   <h2><%=t('revs.user.curator_dashboard')%></h2>
 
@@ -19,7 +19,7 @@
     <div id='annotations-grouped' class="tab-pane <%="active" if @tab == @tab_list_item%>">
 
         <div class="row results-controls">
-          <div class="span5 offset4 saved-item-pagination">
+          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
             <span>
               <%= page_entries_info @annotations_by_item, :entry_name=>t('revs.user_galleries.item') %>
             </span>
@@ -49,7 +49,7 @@
     <div id='annotations-list' class="tab-pane <%="active" if @tab == @tab_list_all%>">
 
         <div class="row results-controls">
-          <div class="span5 offset4 saved-item-pagination">
+          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
             <span>
               <%= page_entries_info @annotations_list, :entry_name=>'annotations' %>
             </span>
@@ -80,7 +80,7 @@
     <div id='annotations-user' class="tab-pane <%="active" if @tab == @tab_list_user%>">
 
         <div class="row results-controls">
-          <div class="span5 offset4 saved-item-pagination">
+          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
             <span>
               <%= page_entries_info @annotations_by_user, :entry_name=>'user' %>
             </span>

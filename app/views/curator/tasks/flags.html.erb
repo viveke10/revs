@@ -1,4 +1,4 @@
-<div id="content" class="span9 admin">
+<div id="content" class="col-md-9 admin">
 	
   <h2><%=t('revs.user.curator_dashboard')%></h2>
 
@@ -26,7 +26,7 @@
     <div  id="<%=@tab_list_item%>" class="tab-pane <%="active" if @tab == @tab_list_item %>">
 
         <div class="row results-controls">
-          <div class="span5 offset4 saved-item-pagination">
+          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
             <span>
               <%= page_entries_info @flags_grouped, :entry_name => t('revs.user_galleries.item') %>
             </span>
@@ -63,7 +63,7 @@
       <div id="<%=@tab_list_user%>" class="tab-pane <%="active" if @tab == @tab_list_user%>">
 
         <div class="row results-controls">
-          <div class="span5 offset4 saved-item-pagination">
+          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
             <span>
               <%# why do I need to reference @flags_by_user before page_entries_info will work? %>
               <% @flags_by_user.inspect %>
