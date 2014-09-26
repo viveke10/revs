@@ -1,4 +1,4 @@
-<div id="content" class="col-md-9 admin">
+<div id="content" class="col-sm-9 admin">
 	
   <h2><%=t('revs.user.curator_dashboard')%></h2>
 
@@ -17,21 +17,19 @@
 
 <%# -- Tab: Flag Status -- %>
     <div  id="<%=@tab_list_flag%>" class="tab-pane <%="active" if @tab == @tab_list_flag %>">
-      <%= select_tag 'curator_flag_selection', options_from_collection_for_select(Flag.for_dropdown, :first, :last, :selected => @selection.join(",")) %>
-      <div id='refresh_flags' class='flag-button btn btn-default btn-small'><%=t('revs.flags.refresh_list')%></div>
+      <%= select_tag 'curator_flag_selection', options_from_collection_for_select(Flag.for_dropdown, :first, :last, :selected => @selection.join(","), :class => "form-control input-sm") %>
+      <div id='refresh_flags' class='flag-button btn btn-default btn-sm'><%=t('revs.flags.refresh_list')%></div>
       <%= render :partial => 'user/flags_table', :locals=>{:selection=>@selection, :flags=>@flags, :user=>current_user,:curate_view=>true }%>
     </div>
 
 <%# -- Tab: Flag Grouped By Item -- %>
     <div  id="<%=@tab_list_item%>" class="tab-pane <%="active" if @tab == @tab_list_item %>">
 
-        <div class="row results-controls">
-          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
-            <span>
-              <%= page_entries_info @flags_grouped, :entry_name => t('revs.user_galleries.item') %>
-            </span>
-          </div>
-        </div>
+      <div class="saved-item-pagination">
+        <span>
+          <%= page_entries_info @flags_grouped, :entry_name => t('revs.user_galleries.item') %>
+        </span>
+      </div>
 
       <table class="admin table table-bordered table-condensed table-hover table-striped">
         <tr>
@@ -62,14 +60,12 @@
 <%# -- Tab: Flag By User -- %>
       <div id="<%=@tab_list_user%>" class="tab-pane <%="active" if @tab == @tab_list_user%>">
 
-        <div class="row results-controls">
-          <div class="col-md-5 col-md-offset-4 saved-item-pagination">
-            <span>
-              <%# why do I need to reference @flags_by_user before page_entries_info will work? %>
-              <% @flags_by_user.inspect %>
-              <%= page_entries_info @flags_by_user, :entry_name => 'user' %>
-            </span>
-          </div>
+        <div class="saved-item-pagination">
+          <span>
+            <%# why do I need to reference @flags_by_user before page_entries_info will work? %>
+            <% @flags_by_user.inspect %>
+            <%= page_entries_info @flags_by_user, :entry_name => 'user' %>
+          </span>
         </div>
 
         <table class="table table-bordered table-condensed table-hover table-striped">
