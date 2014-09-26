@@ -17,8 +17,12 @@
 
 <%# -- Tab: Flag Status -- %>
     <div  id="<%=@tab_list_flag%>" class="tab-pane <%="active" if @tab == @tab_list_flag %>">
-      <%= select_tag 'curator_flag_selection', options_from_collection_for_select(Flag.for_dropdown, :first, :last, :selected => @selection.join(","), :class => "form-control input-sm") %>
-      <div id='refresh_flags' class='flag-button btn btn-default btn-sm'><%=t('revs.flags.refresh_list')%></div>
+      <form class="form-inline">
+        <%= select_tag 'curator_flag_selection', options_from_collection_for_select(Flag.for_dropdown, :first, :last, :selected => @selection.join(",")), :class => "form-control input-sm" %>
+        <div id='refresh_flags' class='flag-button btn btn-default btn-sm'>
+          <%=t('revs.flags.refresh_list')%>
+        </div>
+      </form>
       <%= render :partial => 'user/flags_table', :locals=>{:selection=>@selection, :flags=>@flags, :user=>current_user,:curate_view=>true }%>
     </div>
 
