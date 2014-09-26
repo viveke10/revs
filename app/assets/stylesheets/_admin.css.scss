@@ -8,6 +8,9 @@
       margin-top: 30px;
     }
   }
+  p {
+    max-width: 550px;
+  }
   td.centered, th.centered {
     text-align: center;
   }
@@ -30,7 +33,7 @@
     }
   }
   .row.results-controls {
-    margin-top: 6px;
+    margin-top: 0;
   }
   .nav-tabs {
     margin-bottom: 10px;
@@ -40,8 +43,17 @@
     margin-top: 6px;
     margin-bottom: 0;
   }
-  .btn-small {
+  .update-users input[type="submit"] {
+    vertical-align: top;
+  }
+  .update-users select {
     margin-left: 6px;
+  }
+  .btn-sm {
+    margin-left: 6px;
+  }
+  .lock-account label {
+    vertical-align: top;
   }
   th.edit-count, th.admin-actions {
     min-width: 80px;
@@ -63,6 +75,10 @@
       margin-top: 10px;
     }
   }
+  form.update-field-terms input[type="submit"] {
+    margin-bottom: 12px;
+  }
+  @include item-stats;
 }
 
 .admin.table {
@@ -125,6 +141,9 @@
     .feature-collection.gallery .description-teaser {
       display: none;
     }
+  }
+  ul.item-stats {
+    margin-left: 2px;
   }
 }
 @media screen and (max-width: 767px) {
