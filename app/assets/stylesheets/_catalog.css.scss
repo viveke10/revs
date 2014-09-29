@@ -382,7 +382,7 @@
 }
 
 /* Responsive styles */
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 991px) {
   .blacklight-catalog-show {
     .metadata {
       margin-bottom: 20px;
@@ -394,7 +394,7 @@
   }
 }
 
-@media screen and (max-width: 979px) and (min-width: 768px) {
+@media screen and (max-width: 991px) and (min-width: 768px) {
   .blacklight-catalog-show .metadata {
     margin-top: 5px;
     .dl-horizontal {
