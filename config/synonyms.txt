@@ -13,6 +13,7 @@
 #-----------------------------------------------------------------------
 #some test synonym mappings unlikely to appear in real input text
 chevy,chevrolet
+indy 500,indianapolis 500
 
 # Synonym mappings can be used for spelling correction too
 jagaur => jaguar
