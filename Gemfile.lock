@@ -336,7 +336,7 @@ DEPENDENCIES
   net-ssh-krb
   omniauth
   quiet_assets
-  rails (~> 3.2.19)
+  rails (~> 3.2.21)
   ranked-model
   rest-client
   revs-utils (~> 1.0.5)
